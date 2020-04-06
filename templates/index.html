@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<!--
+	CoronaSim: Website to display my findings in relation to coronavirus
+-->
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html"> {{ title }}</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="generic.html">Generic</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner"> 
+				<div class="inner">
+					<h1 style="text-transform: none">{{ title }}</h1>
+					<p>A website portraying the different ways to view the spread<br />
+					of the coronavirus and figure out how to put an end to it for good.</p>
+				</div>
+            </section>
+            
+            <!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					<h2>About this Website</h2>
+					<p>It seems that the Coronavirus will be impacting the world for quite some time, and I have already had a variety of sources give me conflicting information about how bad it is, how worried I should be, and what I can do to help. As such, I decided to do my own work, since I clearly had the time, and this website simply shows my findings. I would not call myself an expert on the subject, but I think the fields of study speak for themselves, and I would love for you to take a look!</p>
+				</div>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Views</h2>
+                        <p>There are many theories explaining the spread of epidemics, from fields such as mathematics, finance, <br/>
+                        computer science, and many more. Pick your favorite to learn how you can help stop the spread!</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-laptop" style = "color:#943131;margin-bottom:15px;"><span class="label">Icon</span></a>
+									<h3><b>Computer Science</b><br><div style="text-transform:none">Simulations</div></h3>
+								</header>
+								<p>We can code simulations to empirically show the spread of disease, as well as test the actual effect of various changes we make in practice.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-database" style = "color:#943131"><span class="label">Icon</span></a>
+									<h3><b>Machine Learning</b><br><div style="text-transform:none">Logistic Prediction</div></h3>
+								</header>
+								<p>Using historical data regarding epidemics, we can figure out what makes this one similar or different to see how it may play out in the future.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+                                    <a href="#" class="icon fa-line-chart" style="color:#943131"><span class="label">Icon</span></a>
+									<h3><b>Differential Equations</b><br><div style="text-transform:none">The SIR Model</div></h3>
+								</header>
+								<p>The Susceptible, Infected, Recovered model is used to model the change in the population over time, and we can mess with the parameters to see what works best.</p>
+							</div>
+						</section>
+						<!--section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
+									<h3>Interdum gravida</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+									<h3>Faucibus consequat</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
+									<h3>Accumsan viverra</h3>
+								</header>
+								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+							</div>
+						</section-->
+					</div>
+				</div>
+			</section>
+
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					<h2>Bottom Line</h2>
+					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+				</div>
+			</section>
+
+		<!-- Testimonials -->
+			<!--section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Faucibus consequat lorem</h2>
+						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+					</header>
+					<div class="testimonials">
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" />
+									</div>
+									<p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="images/pic03.jpg" alt="" />
+									</div>
+									<p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="images/pic02.jpg" alt="" />
+									</div>
+									<p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section-->
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>About Me</h3>
+							<p>I am a Turing Scholar Computer Science student, Mathematics major, and Economics minor at the University of Texas at Austin. I am proficient in Amazon Web Services, Java, JavaScript, AngularJS, Material, Bootstrap, and more. I want to get experience in computer science as well as explore web development, machine learning, and artificial intelligence. This website is simply my own research and work, but there are many other resources to find good information regarding the spread of the virus, and I highly recommend checking those out as well.</p>
+						</section>
+						<section>
+							<h4>Main References</h4>
+							<ul class="alt">
+                                <li><a href="https://www.worldometers.info/coronavirus/"target="_blank">Worldometer Coronavirus Information</a></li>
+								<li><a href="https://www.youtube.com/watch?v=gxAaO2rsdIs" target="_blank" >3Blue1Brown Simulation</a></li>
+								<li><a href="https://www.maa.org/press/periodicals/loci/joma/the-sir-model-for-spread-of-disease-the-differential-equation-model" target="_blank" >The SIR Model</a></li>
+								<li><a href="#">Dolor pulvinar magna etiam.</a></li>
+							</ul>
+						</section>
+						<section>
+							<h4>Contact Me</h4>
+							<ul class="plain">
+                                <li><a href="http://www.linkedin.com/in/anshjain-145"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a></li>
+                                <li><a href="http://www.github.com/Gamebot3"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100011548208256&ref=bookmarks"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="http://gamebot2.com"><i class="icon fa-sticky-note">&nbsp;</i>Portfolio</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; Ansh Jain, 2020
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
