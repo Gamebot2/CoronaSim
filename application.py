@@ -42,7 +42,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello World'
+    title = 'CoronaSim'
+    return render_template('index.html', title=title)
 
 @app.route('/index.html')
 def html_page():

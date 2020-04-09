@@ -1,0 +1,135 @@
+ * Serving Flask app "application" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "application.py", line 102, in <module>
+    app.run(host="0.0.0.0", port=80)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 1052, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 1005, in inner
+    fd=fd,
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 848, in make_server
+    host, port, app, request_handler, passthrough_errors, ssl_context, fd=fd
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 740, in __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 13] Permission denied
+ * Serving Flask app "application" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+70.236.195.198 - - [09/Apr/2020 04:19:11] "[37mGET / HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:20] "[37mGET / HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET / HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/css/main.css HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/js/browser.min.js HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/js/jquery.min.js HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/js/breakpoints.min.js HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/js/util.js HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/js/main.js HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/assets/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/images/bg.jpg HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/images/banner.jpg HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:22] "[37mGET /static/images/cta01.jpg HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:19:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Serving Flask app "application" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "application.py", line 102, in <module>
+    app.run(host="0.0.0.0", port=80)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 1052, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 1005, in inner
+    fd=fd,
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 848, in make_server
+    host, port, app, request_handler, passthrough_errors, ssl_context, fd=fd
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 740, in __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 13] Permission denied
+ * Serving Flask app "application" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "application.py", line 102, in <module>
+    app.run(host="0.0.0.0", port=80)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 1052, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 1005, in inner
+    fd=fd,
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 848, in make_server
+    host, port, app, request_handler, passthrough_errors, ssl_context, fd=fd
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 740, in __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 13] Permission denied
+ * Serving Flask app "application" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+70.236.195.198 - - [09/Apr/2020 04:22:33] "[37mGET / HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+70.236.195.198 - - [09/Apr/2020 04:22:42] "[37mGET /diffeq.html HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:43] "[37mGET /static/assets/js/diffeq.js HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:43] "[37mGET /data/0.6/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:46] "[37mGET /data/0.55/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:46] "[37mGET /data/0.54/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:46] "[37mGET /data/0.53/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:46] "[37mGET /data/0.52/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:46] "[37mGET /data/0.51/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:46] "[37mGET /data/0.5/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:46] "[37mGET /data/0.49/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.48/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.47/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.45/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.44/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.45/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.46/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.47/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.48/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.49/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:47] "[37mGET /data/0.5/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:48] "[37mGET /data/0.51/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:48] "[37mGET /data/0.52/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:48] "[37mGET /data/0.53/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:48] "[37mGET /data/0.54/0.38 HTTP/1.1[0m" 200 -
+70.236.195.198 - - [09/Apr/2020 04:22:48] "[37mGET /data/0.55/0.38 HTTP/1.1[0m" 200 -
