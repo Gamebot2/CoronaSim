@@ -89,3 +89,6 @@ def sir(y, t, b, k):
     s, i, r = y
     dydt = [-b*s*i, b*s*i - k*i, k*i]
     return dydt
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=80)
