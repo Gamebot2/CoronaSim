@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+	CoronaSim: Website to display my findings in relation to coronavirus
+-->
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html"> {{ title }}</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="diffeq.html">Differential Equations</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<section id="banner"> 
+			<div class="inner">
+				<h1 style="text-transform: none">{{ title }}</h1>
+				<p>Using the Susceptible, Infected, Recovered (SIR) model <br />
+				to learn what we can do better as a community.</p>
+			</div>
+		</section>
+
+		<!-- Testimonials -->
+		<section class="wrapper">
+			<div class="inner">
+				<header class="special">
+					<h2>The SIR Model</h2>
+					<p>The SIR model is a system of ordinary differential equations with two main parameters: the infection rate <strong>b</strong> and the recovery rate <strong>k</strong>.
+					Using the chart below, play around with values of <strong>b</strong> and <strong>k</strong> to see what helps flatten the curve.</p>
+				</header>
+
+				<div class="testimonials">
+					<section>
+						<div class="content">
+							<div class="slidecontainer">
+								<p><strong>b</strong>: infection rate</p>
+								<input type="range" min="0" max="100" value="60" class="slider" id="bSlider">
+								<p id="bValue"></p>
+							</div>
+							<br>
+							<br>
+							<div class="slidecontainer">
+								<p><strong>k</strong>: recovery rate</p>
+								<input type="range" min="0" max="100" value="38" class="slider" id="kSlider">
+								<p id="kValue"></p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div>
+							<!-- <button onclick="myFunction()">OHYEAH</button> -->
+							<canvas id="myChart" width="800" height="800"></canvas>
+						</div>
+					</section>
+					<section>
+						<div class="content">
+							<h3>Key Statistics</h3>
+							<strong><p id="peopleInfected"></p></strong> People Infected in 1 year
+							<br> 
+							<br>
+							<strong><p id="maxInfected"></p></strong> Max infected on 1 day
+							<br>
+							<strong><p id="warning" style="color:red"></p></strong>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper">
+			<div class="inner">
+				<h2>What does this mean?</h2>
+				<p>You can play around with the graph for as long as you like, but one thing will become abundantly clear
+					before long: we have to lower <strong>b</strong>. The only way to keep the red line under the capacity of
+					our healthcare system is to lower the infection rate, by washing your hands and following appropriate social 
+					distancing measures. It is clear that our healthcare system simply does not have a huge capacity, so it's imperative
+					that we lower <strong>b</strong> so it gets as close to <strong>k</strong> as possible. Who says math can't save lives?
+				</p>
+			</div>
+		</section>
+
+		<section class="wrapper">
+			<div class="inner">
+				<header class="special">
+					<h2>The Infection Curve</h2>
+					<p>Below is the graph of only the infection curve. It's pretty clear to see that reducing the max infected people <br>
+					below the capacity of the healthcare system is going to be very difficult.</p>
+				</header>
+
+				<div class="testimonials">
+					<section>
+						<div class="content">
+							<div class="slidecontainer">
+								<p><strong>b</strong>: infection rate</p>
+								<input type="range" min="0" max="100" value="60" class="slider" id="bSlider2">
+								<p id="bValue2"></p>
+							</div>
+							<br>
+							<br>
+							<div class="slidecontainer">
+								<p><strong>k</strong>: recovery rate</p>
+								<input type="range" min="0" max="100" value="38" class="slider" id="kSlider2">
+								<p id="kValue2"></p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<div>
+							<!-- <button onclick="myFunction()">OHYEAH</button> -->
+							<canvas id="infectionChart" width="400" height="400"></canvas>
+						</div>
+					</section>
+					<section>
+						<div class="content">
+							<h3>Key Statistics</h3>
+							<strong><p id="hospitalBeds2">~1,700,000</p></strong> Hospital Beds in the USA
+							<br> 
+							<br>
+							<strong><p id="maxInfected2"></p></strong> Max infected on 1 day
+							<br>
+							<strong><p id="warning2" style="color:red"></p></strong>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+		
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>About Me</h3>
+							<p>I am a Turing Scholar Computer Science student, Mathematics major, and Economics minor at the University of Texas at Austin. I am proficient in Amazon Web Services, Java, JavaScript, AngularJS, Material, Bootstrap, and more. I want to get experience in computer science as well as explore web development, machine learning, and artificial intelligence. This website is simply my own research and work, but there are many other resources to find good information regarding the spread of the virus, and I highly recommend checking those out as well.</p>
+						</section>
+						<section>
+							<h4>Main References</h4>
+							<ul class="alt">
+                                <li><a href="https://www.worldometers.info/coronavirus/"target="_blank">Worldometer Coronavirus Information</a></li>
+								<li><a href="https://www.youtube.com/watch?v=gxAaO2rsdIs" target="_blank" >3Blue1Brown Simulation</a></li>
+								<li><a href="https://www.maa.org/press/periodicals/loci/joma/the-sir-model-for-spread-of-disease-the-differential-equation-model" target="_blank" >The SIR Model</a></li>
+								<li><a href="#">Dolor pulvinar magna etiam.</a></li>
+							</ul>
+						</section>
+						<section>
+							<h4>Contact Me</h4>
+							<ul class="plain">
+                                <li><a href="http://www.linkedin.com/in/anshjain-145"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a></li>
+                                <li><a href="http://www.github.com/Gamebot3"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100011548208256&ref=bookmarks"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="http://gamebot2.com"><i class="icon fa-sticky-note">&nbsp;</i>Portfolio</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; Ansh Jain, 2020
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>	
+			<script src="{{ url_for('static', filename='assets/js/diffeq.js') }}"></script>
+		</body>
+</html>
