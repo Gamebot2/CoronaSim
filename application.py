@@ -44,11 +44,19 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World'
 
-@app.route('/html')
+@app.route('/index.html')
 def html_page():
     title = 'CoronaSim'
     return render_template('index.html', title=title)
 
+@app.route('/diffeq.html')
+def diffeq_html():
+    title = 'Differential Equations'
+    return render_template('diffeq.html', title=title)
+
+@app.route('/elements.html')
+def elements_html():
+    return render_template('elements.html')
 
 @app.route('/plot.png')
 def plot_png():
@@ -58,15 +66,15 @@ def plot_png():
     return Response(output.getvalue(), mimetype='image/png')
 
 @app.route('/data/<float:b>/<float:k>')
-def test(b, k):
-    print(str(b) + " " + str(k))
+def return_ode_solution(b, k):
+    # print(str(b) + " " + str(k))
     sol = get_sol(b,k)
     return jsonify(sol.tolist())
 
 def get_sol(b, k):
     n = 327200000
     y0 = [1, 1.27 * (10 ** -6), 0]
-    t = np.linspace(0, 140, 300)
+    t = np.linspace(0, 140, 365)
     sol = odeint(sir, y0, t, args=(b,k))
     sol = sol * n
     return sol
@@ -83,7 +91,6 @@ def create_figure(b, k):
     plt.ylabel('People (Hundred Millions)')
     plt.grid()
     return fig
-
 
 def sir(y, t, b, k):
     s, i, r = y
