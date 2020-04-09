@@ -83,6 +83,12 @@ var infectionChart = new Chart(ctx2, {
             borderWidth: 1.5,
             pointRadius: 0.5,
         }, {
+            label: 'Serious Condition',
+            data: [],
+            borderColor:'rgba(125, 20, 12, 1)',
+            borderWidth: 1.5,
+            pointRadius: 0.5,
+        }, {
             label: 'Hospital Beds',
             data: [],
             borderColor: 'rgba(25, 25, 25, 1)',
@@ -216,34 +222,49 @@ function updateChart(data) {
 function updateInfectionChart(data) {
     var xLabels = [];
     var infected = [];
+    var seriousInfected = [];
     var hospitalbeds = [];
 
     var maxInfected = 0;
+    var maxSeriousInfected = 0;
 
     for(var i = 0; i < data.length; i++) {
         xLabels.push(i);
         infected.push(Math.round(data[i][1]));
+        seriousInfected.push(Math.round(data[i][1] * .04));
+
         if(!bedset2) {
-            hospitalbeds.push(1700000);
+            hospitalbeds.push(924000);
         }
         if(infected[i] > maxInfected) {
             maxInfected = infected[i];
+        }
+        if(seriousInfected[i] > maxSeriousInfected) {
+            maxSeriousInfected = seriousInfected[i];
         }
     }
 
     infectionChart.data.labels = xLabels;
     infectionChart.data.datasets[0].data = infected;
+    infectionChart.data.datasets[1].data = seriousInfected;
     if(!bedset2) {
-        infectionChart.data.datasets[1].data = hospitalbeds;
+        infectionChart.data.datasets[2].data = hospitalbeds;
         bedset2 = true;
     }
     infectionChart.update();
 
     document.getElementById("maxInfected2").innerHTML = numberWithCommas(maxInfected);
-    if(maxInfected > 1700000) {
-        document.getElementById("warning2").innerHTML = "Max Healthcare Capacity Exceeded";
+    if(maxInfected > 924000) {
+        document.getElementById("warning2").innerHTML = "Infected > Max Healthcare Capacity";
     } else {
         document.getElementById("warning2").innerHTML = "";
+    }
+
+    document.getElementById("maxSeriouslyInfected").innerHTML = numberWithCommas(maxSeriousInfected);
+    if(maxSeriousInfected > 924000) {
+        document.getElementById("warning3").innerHTML = "Seriously Infected > Max Healthcare Capacity";
+    } else {
+        document.getElementById("warning3").innerHTML = "";
     }
 
 }
