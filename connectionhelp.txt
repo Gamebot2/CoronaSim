@@ -1,0 +1,10 @@
+ssh -i "CoronaSimKeyPair2.pem" ubuntu@ec2-3-18-101-44.us-east-2.compute.amazonaws.com
+
+Finding Process:
+ps aux | grep application.py
+
+Killing Process:
+sudo kill -9 [pid]
+
+Restarting Process:
+sudo nohup python application.py &
